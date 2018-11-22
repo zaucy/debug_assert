@@ -1,0 +1,11 @@
+cc_library(
+    name = "debug_assert",
+    hdrs = ["debug_assert.hpp"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "debug_assert_example",
+    srcs = ["example.cpp"],
+    deps = [":debug_assert"],
+)
